@@ -73,9 +73,7 @@ export default function Services() {
                           <p className='text-neutral-400 mb-6'>
                               {plan.description}
                           </p>
-                          <div className='text-2xl lg:text-3xl font-medium mb-6'>
-                              {plan.price}
-                          </div>
+                          
                           <ul className='mb-8 space-y-2 text-neutral-400'>
                               {plan.features.map((feature, i) => (
                                   <li key={i} className='flex items-center'>
