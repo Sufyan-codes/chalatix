@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  background: ;
+}
+
+
+
+.background {
+  background-image: url('src/assets/steve-johnson-IKgooEXVGI4-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.circle {
+  margin-top: -100px;
+}
+.circles {
+
+  border: 5px solid black;
+}
+
+.white-gradient {
+ 
+  width: 20rem;
+  height: 20rem;
+  left: -100px;
+  background: rgba(85, 85, 85, 0.522);
+  filter: blur(100px);
+  border-radius: 100px;
+}
+
+.white-gradient2 {
+
+  width: 20rem;
+  height: 20rem;
+  margin-top: 250px;
+  right: -100px;
+  background: rgba(85, 85, 85, 0.522);
+  filter: blur(100px);
+  border-radius: 100px;
+}
