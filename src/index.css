@@ -4,7 +4,9 @@
 
 
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 .background {
   background-image: url('src/assets/steve-johnson-IKgooEXVGI4-unsplash.jpg');

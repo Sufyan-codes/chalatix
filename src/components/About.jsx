@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import img from "../assets/milad-fakurian-3-QTY22bQGQ-unsplash.jpg"
 import {Swiper, SwiperSlide, useSwiper} from 'swiper/react'
 import "swiper/css"
+import "../index.css"
 
 export default function About() {
   

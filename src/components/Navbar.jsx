@@ -19,15 +19,16 @@ export default function Navbar() {
 
                 {/* center Links */}
                 <div className="hidden md:flex space-x-6">
-                    <a href="#works" className="hover:text-neutral-500">
+                    <a href="#about" className="hover:text-neutral-500">
                         Our works
+                    </a>
+                    <a href="#projects" className="hover:text-neutral-500">
+                        Projects
                     </a>
                     <a href="#pricing" className="hover:text-neutral-500">
                         Services
                     </a>
-                    <a href="#products" className="hover:text-neutral-500">
-                        Products
-                    </a>
+                   
                 </div>
 
                 {/* right btns */}

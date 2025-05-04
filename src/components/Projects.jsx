@@ -32,7 +32,7 @@ export default function Projects() {
     }
   
     return (
-        <section className='bg-black' id='project'>
+        <section className='bg-black' id='projects'>
             <div className='max-w-7xl mx-auto py-20 text-white'>
                 <motion.div
                     variants={containerVariants}
