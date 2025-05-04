@@ -46,7 +46,7 @@ export default function Projects() {
                     </div>
 
                     <div>
-                        <div className='flex flex-col gap-2'>
+                        <div className='flex flex-col gap-2 '>
                             
                         <p className='lg:text-2xl text-xl text-white tracking-tighter'><span className='text-neutral-600'>03 / </span>PROJECTS</p>
                         <h1 className='lg:text-5xl text-3xl text-white tracking-tighter'>"We <span className='font-semibold'>crafted</span> Products <br />

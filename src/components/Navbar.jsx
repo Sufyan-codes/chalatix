@@ -12,7 +12,7 @@ export default function Navbar() {
     return (
         <nav className="fixed bg-white py-4 left-0 right-0 z-50 m2">
             <div className="text-black   
-            max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            max-w-6xl mx-auto px-4 py-1 flex justify-between items-center">
                 {/* Left Logo */}
                 {/* <img src={logo} alt="logo" width={120} height={24} /> */}
                 <a href="#" className='font-bold text-2xl'>Chalatix</a>
@@ -55,18 +55,18 @@ export default function Navbar() {
                 <div className="md:hidden  backdrop-blur-md border-b
                  p-4  mt-2">
                     <div className='flex flex-col space-y-4'>
-                        <a href="#" className='text-neutral-900 hover:text-neutral-700'>
+                        <a href="#about" className='text-neutral-900 hover:text-neutral-700'>
                             Our works
                         </a>
-                        <a href="#" className='text-neutral-900 hover:text-neutral-700'>
+                        <a href="#pricing" className='text-neutral-900 hover:text-neutral-700'>
                             Services
                         </a>
                         <a href="#" className='text-neutral-900 hover:text-neutral-700'>
-                            Products
+                            Projeccts
                         </a>
-                    <a href="#" className="bg-gray-900 text-white
-                    py-2 px-4  hover:bg-gray-700 transition">
-                        Start Free Trial
+                    <a href="#" className="bg-black text-white
+                    py-2 px-4  hover:bg-black-700 transition">
+                       Get Started
                     </a>
                     </div>
                 </div>
