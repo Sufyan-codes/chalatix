@@ -1,303 +1,273 @@
-import StreamLabsLogo from "../assets/streamlabs-logo.png";
-import BroadcastlyLogo from "../assets/broadcastly-logo.png";
-import LiveStreamerLogo from "../assets/livestreamer-logo.png";
-import CloudCastLogo from "../assets/cloudcast-logo.png";
+import { ChartColumn, Home, NotepadText, Package, PackagePlus, Settings, ShoppingBag, UserCheck, UserPlus, Users } from "lucide-react";
 
-import streamImage from "../assets/streamer.jpeg";
-import chart from "../assets/chart.png";
-import optimize from "../assets/optimize.jpeg";
-import audienceEngagementImage from "../assets/audience.jpeg";
-import monetizeImage from "../assets/monetize.jpeg";
-import automationImage from "../assets/automation.jpeg";
-import user1 from "../assets/user1.jpeg";
-import user2 from "../assets/user2.jpeg";
-import user3 from "../assets/user3.jpeg";
-import user4 from "../assets/user4.jpeg";
-import user5 from "../assets/user5.jpeg";
-import user6 from "../assets/user6.jpeg";
+import ProfileImage from "@/assets/profile-image.jpg";
+import ProductImage from "@/assets/product-image.jpg";
 
-import {
-  RiBarChart2Line,
-  RiSettings2Line,
-  RiTeamLine,
-  RiTwitchLine,
-  RiYoutubeLine,
-  RiCalendarLine,
-} from "@remixicon/react";
-
-export const HERO_CONTENT = {
-  badgeText: "🚀 New Feature: Stream Analytics 2.0 Now Live!",
-  mainHeading: "The Ultimate \n Streaming Toolkit+",
-  subHeading:
-    "Optimize your streams, track real-time analytics, and engage your audience effortlessly—all in one place. Perfect for Twitch, YouTube, and Facebook streamers.",
-  callToAction: {
-    primary: "Start Free Trial",
-    secondary: "Request a Demo",
-  },
-  trustedByText: "Trusted by Leading Streaming Brands & Creators",
-};
-
-export const BRAND_LOGOS = [
-  { src: StreamLabsLogo, alt: "StreamLabs" },
-  { src: BroadcastlyLogo, alt: "Broadcastly" },
-  { src: LiveStreamerLogo, alt: "LiveStreamer" },
-  { src: CloudCastLogo, alt: "CloudCast" },
+export const navbarLinks = [
+    {
+        title: "Dashboard",
+        links: [
+            {
+                label: "Dashboard",
+                icon: Home,
+                path: "/",
+            },
+            {
+                label: "Analytics",
+                icon: ChartColumn,
+                path: "/analytics",
+            },
+            {
+                label: "Reports",
+                icon: NotepadText,
+                path: "/reports",
+            },
+        ],
+    },
+    {
+        title: "Customers",
+        links: [
+            {
+                label: "Customers",
+                icon: Users,
+                path: "/customers",
+            },
+            {
+                label: "New customer",
+                icon: UserPlus,
+                path: "/new-customer",
+            },
+            {
+                label: "Verified customers",
+                icon: UserCheck,
+                path: "/verified-customers",
+            },
+        ],
+    },
+    {
+        title: "Products",
+        links: [
+            {
+                label: "Products",
+                icon: Package,
+                path: "/products",
+            },
+            {
+                label: "New product",
+                icon: PackagePlus,
+                path: "/new-product",
+            },
+            {
+                label: "Inventory",
+                icon: ShoppingBag,
+                path: "/inventory",
+            },
+        ],
+    },
+    {
+        title: "Settings",
+        links: [
+            {
+                label: "Settings",
+                icon: Settings,
+                path: "/settings",
+            },
+        ],
+    },
 ];
 
-export const HOW_IT_WORKS_CONTENT = {
-  sectionTitle: "How it works!",
-  sectionDescription:
-    "Stream like a pro with our 6-step process. From setup to performance tracking, we've got everything you need to elevate your streaming experience.",
-  steps: [
+export const overviewData = [
     {
-      title: "Set Up Your Streaming Environment",
-      description:
-        "Easily configure your streaming environment with our user-friendly tools. Connect to Twitch, YouTube, and more in minutes.",
-      imageSrc: streamImage,
-      imageAlt: "Streaming Setup",
+        name: "Jan",
+        total: 1500,
     },
     {
-      title: "Engage with Your Audience",
-      description:
-        "Interact with your audience in real-time through custom alerts, chat overlays, and live notifications.",
-      imageSrc: audienceEngagementImage,
-      imageAlt: "Audience Engagement",
-      users: [user1, user2, user3, user5],
+        name: "Feb",
+        total: 2000,
     },
     {
-      title: "Track and Analyze Performance",
-      description:
-        "Monitor your stream’s performance in real-time with detailed analytics and viewer engagement insights.",
-      imageSrc: chart,
-      imageAlt: "Performance Analytics",
+        name: "Mar",
+        total: 1000,
     },
     {
-      title: "Optimize Your Stream Settings",
-      description:
-        "Fine-tune your stream settings for optimal performance, ensuring smooth streams even during high traffic.",
-      imageSrc: optimize,
-      imageAlt: "Optimize Settings",
+        name: "Apr",
+        total: 5000,
     },
     {
-      title: "Monetize Your Streams",
-      description:
-        "Unlock revenue streams by adding subscriptions, donations, and sponsorships to your stream.",
-      imageSrc: monetizeImage,
-      imageAlt: "Monetization",
+        name: "May",
+        total: 2000,
     },
     {
-      title: "Automate Your Workflows",
-      description:
-        "Use advanced automation tools to manage your schedule, alerts, and promotions effortlessly.",
-      imageSrc: automationImage,
-      imageAlt: "Workflow Automation",
+        name: "Jun",
+        total: 5900,
     },
-  ],
-};
+    {
+        name: "Jul",
+        total: 2000,
+    },
+    {
+        name: "Aug",
+        total: 5500,
+    },
+    {
+        name: "Sep",
+        total: 2000,
+    },
+    {
+        name: "Oct",
+        total: 4000,
+    },
+    {
+        name: "Nov",
+        total: 1500,
+    },
+    {
+        name: "Dec",
+        total: 2500,
+    },
+];
 
-export const KEY_FEATURES_CONTENT = {
-  sectionTitle: "Stream Smarter with These Key Features",
-  sectionDescription:
-    "Everything you need to enhance your streaming experience, all in one place.",
-  features: [
+export const recentSalesData = [
     {
-      id: 1,
-      icon: <RiBarChart2Line className="w-8 h-8" />,
-      title: "Real-Time Stream Analytics",
-      description:
-        "Track your audience engagement, viewer count, and performance in real-time.",
+        id: 1,
+        name: "Olivia Martin",
+        email: "olivia.martin@email.com",
+        image: ProfileImage,
+        total: 1500,
     },
     {
-      id: 2,
-      icon: <RiSettings2Line className="w-8 h-8" />,
-      title: "Automated Stream Management",
-      description:
-        "Set up automated alerts, stream schedules, and more with ease.",
+        id: 2,
+        name: "James Smith",
+        email: "james.smith@email.com",
+        image: ProfileImage,
+        total: 2000,
     },
     {
-      id: 3,
-      icon: <RiTeamLine className="w-8 h-8" />,
-      title: "Audience Engagement Tools",
-      description:
-        "Interact with your audience through custom alerts, chat integrations, and giveaways.",
+        id: 3,
+        name: "Sophia Brown",
+        email: "sophia.brown@email.com",
+        image: ProfileImage,
+        total: 4000,
     },
     {
-      id: 4,
-      icon: <RiTwitchLine className="w-8 h-8" />,
-      title: "Twitch Integration",
-      description:
-        "Seamlessly connect with Twitch to automate alerts, manage subscribers, and track donations.",
+        id: 4,
+        name: "Noah Wilson",
+        email: "noah.wilson@email.com",
+        image: ProfileImage,
+        total: 3000,
     },
     {
-      id: 5,
-      icon: <RiYoutubeLine className="w-8 h-8" />,
-      title: "YouTube Streaming Support",
-      description:
-        "Go live on YouTube with built-in tools for managing chats, subscribers, and more.",
+        id: 5,
+        name: "Emma Jones",
+        email: "emma.jones@email.com",
+        image: ProfileImage,
+        total: 2500,
     },
     {
-      id: 6,
-      icon: <RiCalendarLine className="w-8 h-8" />,
-      title: "Schedule Streams",
-      description:
-        "Plan and schedule your streams ahead of time, with reminders sent to your audience.",
+        id: 6,
+        name: "William Taylor",
+        email: "william.taylor@email.com",
+        image: ProfileImage,
+        total: 4500,
     },
-  ],
-};
+    {
+        id: 7,
+        name: "Isabella Johnson",
+        email: "isabella.johnson@email.com",
+        image: ProfileImage,
+        total: 5300,
+    },
+];
 
-export const PLANS_CONTENT = {
-  sectionTitle: "Choose Your Plan",
-  sectionDescription:
-    "Streamerzz offers flexible pricing plans to fit every streamer’s needs, from beginner to pro.",
-  popularBadge: "Most Popular",
-  ctaText: "Get Started",
-  plans: [
+export const topProducts = [
     {
-      name: "01 Web & Mobile App Development",
-      price: "$9.99/month",
-      description:
-        "World class high converting web and mobile applications.",
-      features: [
-        "Frontend Development",
-        "Backend Development",
-        "Fullstack Web App",
-        "Fullstack Mobile Apps",
-      ],
+        number: 1,
+        name: "Wireless Headphones",
+        image: ProductImage,
+        description: "High-quality noise-canceling wireless headphones.",
+        price: 99.99,
+        status: "In Stock",
+        rating: 4.5,
     },
     {
-      name: "02 Motion Design.",
-      price: "$19.99/month",
-      description:
-        "Using the latest Technologies, we bring you the smoothest motion designs.",
-      features: [
-        "Advanced design",
-        "Custom alerts & notifications",
-        "HD streaming up to 1080p",
-        "Real-time audience insights",
-        "Unlimited support",
-      ],
-      popular: true,
+        number: 2,
+        name: "Smartphone",
+        image: ProductImage,
+        description: "Latest 5G smartphone with excellent camera features.",
+        price: 799.99,
+        status: "In Stock",
+        rating: 4.7,
     },
     {
-      name: "03 Illustrations",
-      price: "$49.99/month",
-      description:
-        "For personal illustrations, we are different type.",
-      features: [
-        "3d renderings",
-        "Cartoon designs",
-        "Comic books",
-        "Manga art",
-        "Custom branding & overlays",
-      ],
-    },
-  ],
-};
-
-export const TESTIMONIALS_CONTENT = {
-  sectionTitle: "What Our Streamers Say",
-  sectionDescription:
-    "Hear from some of the top streamers who use Streamerzz to engage with their audience and grow their channels.",
-  reviews: [
-    {
-      name: "Alice Johnson",
-      title: "Content Creator",
-      review:
-        "Streamerzz has revolutionized the way we manage our content subscriptions. The intuitive dashboard and real-time analytics have made it easier to track our progress and optimize our offerings. Highly recommended!",
-      image: user1,
+        number: 3,
+        name: "Gaming Laptop",
+        image: ProductImage,
+        description: "Powerful gaming laptop with high-end graphics.",
+        price: 1299.99,
+        status: "In Stock",
+        rating: 4.8,
     },
     {
-      name: "Bob Smith",
-      title: "Marketing Specialist",
-      review:
-        "The team at Streamerzz has been fantastic! Their support is responsive and knowledgeable. The platform itself is versatile and has helped us streamline our subscription management, saving us time and increasing efficiency.",
-      image: user2,
+        number: 4,
+        name: "Smartwatch",
+        image: ProductImage,
+        description: "Stylish smartwatch with fitness tracking features.",
+        price: 199.99,
+        status: "Out of Stock",
+        rating: 4.4,
     },
     {
-      name: "Carla Mendes",
-      title: "Product Manager",
-      review:
-        "Streamerzz's automated billing and comprehensive analytics have been game-changers for our product team. We can now easily track user engagement and make data-driven decisions to enhance our service offerings.",
-      image: user3,
+        number: 5,
+        name: "Bluetooth Speaker",
+        image: ProductImage,
+        description: "Portable Bluetooth speaker with deep bass sound.",
+        price: 59.99,
+        status: "In Stock",
+        rating: 4.3,
     },
     {
-      name: "David Lee",
-      title: "Customer Success Manager",
-      review:
-        "Using Streamerzz, we’ve been able to increase our customer retention rates. The platform's user-friendly interface and powerful features have provided our customers with a seamless experience, leading to higher satisfaction.",
-      image: user4,
+        number: 6,
+        name: "4K Monitor",
+        image: ProductImage,
+        description: "Ultra HD 4K monitor with stunning color accuracy.",
+        price: 399.99,
+        status: "In Stock",
+        rating: 4.6,
     },
     {
-      name: "Ella Fernandez",
-      title: "UX Designer",
-      review:
-        "Streamerzz's flexibility and ease of use have made it a key tool in our design process. We can quickly adjust our subscription plans and monitor the impact on user engagement, allowing for a more responsive approach.",
-      image: user5,
+        number: 7,
+        name: "Mechanical Keyboard",
+        image: ProductImage,
+        description: "Mechanical keyboard with customizable RGB lighting.",
+        price: 89.99,
+        status: "In Stock",
+        rating: 4.7,
     },
     {
-      name: "Frank Wilson",
-      title: "Data Analyst",
-      review:
-        "Streamerzz provides us with detailed insights into our subscription metrics. The advanced reporting tools have enabled us to identify trends and make informed decisions to optimize our growth strategy.",
-      image: user6,
-    },
-  ],
-};
-
-export const FOOTER_CONTENT = {
-  sections: [
-    {
-      title: "TOOLS & SERVICES",
-      links: [
-        { text: "Real-time Analytics", url: "#" },
-        { text: "Customizable Alerts", url: "#" },
-        { text: "Integrated Chat Systems", url: "#" },
-        { text: "Instant Notifications", url: "#" },
-        { text: "Overlays & Visuals", url: "#" },
-        { text: "Mobile Streaming Support", url: "#" },
-        { text: "4K Stream Capabilities", url: "#" },
-        { text: "Stream Scheduling Tool", url: "#" },
-      ],
+        number: 8,
+        name: "Wireless Mouse",
+        image: ProductImage,
+        description: "Ergonomic wireless mouse with precision tracking.",
+        price: 49.99,
+        status: "In Stock",
+        rating: 4.5,
     },
     {
-      title: "SUPPORT & RESOURCES",
-      links: [
-        { text: "Subscription Plans", url: "#" },
-        { text: "Affiliate Program", url: "#" },
-        { text: "Frequently Asked Questions", url: "#" },
-        { text: "Company Blog", url: "#" },
-        { text: "Subscribe to Newsletter", url: "#" },
-        { text: "Latest Features", url: "#" },
-        { text: "Merchandise Store", url: "#" },
-        { text: "Workshops & Events", url: "#" },
-      ],
+        number: 9,
+        name: "Action Camera",
+        image: ProductImage,
+        description: "Waterproof action camera with 4K video recording.",
+        price: 249.99,
+        status: "In Stock",
+        rating: 4.8,
     },
     {
-      title: "CONNECT WITH US",
-      links: [
-        { text: "Twitter", url: "#" },
-        { text: "Facebook", url: "#" },
-        { text: "TikTok", url: "#" },
-        { text: "LinkedIn", url: "#" },
-        { text: "YouTube", url: "#" },
-        { text: "Twitch", url: "#" },
-        { text: "Discord", url: "#" },
-      ],
+        number: 10,
+        name: "External Hard Drive",
+        image: ProductImage,
+        description: "Portable 2TB external hard drive for data storage.",
+        price: 79.99,
+        status: "Out of Stock",
+        rating: 4.5,
     },
-    {
-      title: "LEARN & EXPLORE",
-      links: [
-        { text: "Engage Viewers with Custom Alerts", url: "#" },
-        { text: "Top Streaming Strategies for New Streamers", url: "#" },
-        { text: "How to Stream in 4K for Maximum Quality", url: "#" },
-        { text: "Efficient Stream Scheduling Techniques", url: "#" },
-        { text: "Using Analytics to Boost Engagement", url: "#" },
-        { text: "Create Stunning Overlays for Streams", url: "#" },
-        { text: "Advanced Analytics for Streamers: A Guide", url: "#" },
-      ],
-    },
-  ],
-  platformsText:
-    "Streaming Platforms | Twitch | YouTube | Discord | Facebook Gaming",
-  copyrightText: "© 2024 Streamerzz, Inc. All rights reserved.",
-};
+];

@@ -1,7 +1,6 @@
 import React from 'react'
 import { BRAND_LOGOS, HERO_CONTENT} from "../constants"
 import heroImage from "../assets/hero.jpg"
-import img from '../assets/forward_interface_mobile_next_ui_icon.svg'
 import {motion} from 'framer-motion'
 
 export default function HeroSection() {
@@ -27,49 +26,66 @@ export default function HeroSection() {
       initial='hidden'
       animate='visible'
       className='pt-28 lg:pt-36'>
-      <div className='max-w-7xl  mx-0 lg:px-28 px-5 flex flex-col text-black lg:items-left
-      lg:text-left'>
+      <div className='max-w-7xl mx-auto px-4 flex flex-col items-center
+      text-center'>
+        <motion.div
+          variants={fadeInUp}
+          className='mb-8 border-neutral-800 px-3 py-2 rounded-full
+        text-xs'>
+          {HERO_CONTENT.badgeText}
+        </motion.div>
         <motion.h1
           variants={fadeInUp}
-          className=' text-4xl lg:text-9xl md:text-5xl   my-4 text-black tracking-tighter'>
-          <span className='font-bold'>Chalatix</span>  Agency,
+          className='text-5xl lg:text-8xl my-4 font-semibold tracking-lighter
+        bg-gradient-to-b from-neutral-50 via-neutral-300 to-neutral-700
+        bg-clip-text text-transparent'>
+          {HERO_CONTENT.mainHeading.split("\n").map((text, index) => (
+            <span key={index}>
+              {text}
+              <br />
+            </span>
+          ))}
         </motion.h1>
 
-        <div className='lg:flex items-center gap-6'>
         <motion.p
           variants={fadeInUp}
-          className='mt-6 text-black lg:ml-28  lg:text-5xl text-2xl  max-w-2xl text-left tracking-tighter'>
-          Turning and bringing  <span className='font-bold'>idea </span>  
-           into <span className='font-bold'>amazing</span> product through 
-          next level visual display.
+          className='mt-6 text-neutral-400 max-w-xl'>
+          {HERO_CONTENT.subHeading}
         </motion.p>
 
         <motion.div
           variants={fadeInUp}
-          className='mt-6 space-x-4 px-8 py-5'>
-          <a href="#" className='inline-block bg-purple-700 hover:bg-purple-500
-            text-white py-12 px-12 text-xl rounded-full font-medium'>
-            Get in <br /> Touch
+          className='mt-6 space-x-4'>
+          <a href="#" className='inline-block bg-blue-600 hover:bg-blue-500
+            text-white py-3 px-6 rounded-lg font-medium'>
+            {HERO_CONTENT.callToAction.primary}
           </a>
-          
-          </motion.div>
-          
-        </div>
+          <a href="#" className='inline-block border border-grey-500 hover:bg-gray-500
+            text-white py-3 px-6 rounded-lg font-medium'>
+            {HERO_CONTENT.callToAction.secondary}
+            </a>
+        </motion.div>
 
         <motion.div
           variants={fadeIn}
-          className='py-8 '>
-
+          className='py-10'>
+          <p className='text-grey-400 text-center mb-8'>
+            {HERO_CONTENT.trustedByText}
+          </p>
           <motion.div
             variants={fadeInUp}
-            className='flex flex-wrap justify-center  lg:gap-8 gap-5   lg:max-w-xl'>
-            <p className='lg:text-2xl text-neutral-900'><a href="#">Behance.</a></p>
-            <p className='lg:text-2xl text-neutral-900'><a href="#">Dribble.</a></p>
-            <p className='lg:text-2xl text-neutral-900'><a href="#">Instagram.</a></p>
-            
+            className='flex flex-wrap justify-center gap-8'>
+            {BRAND_LOGOS.map((logo, index) => (
+              <img key={index} src={logo.src} alt="" className='h-8' />
+            ))}
           </motion.div>
         </motion.div>
 
+        <motion.div
+          variants={fadeIn}
+          className='mt-12'>
+          <img src={heroImage} alt="" className='w-full h-auto rounded-3xl border border-neutral-800 mb-20'/>
+        </motion.div>
       </div>
     </motion.section>
   )

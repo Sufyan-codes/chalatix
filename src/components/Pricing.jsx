@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import {PLANS_CONTENT} from '../constants'
 
-export default function Services() {
+export default function Pricing() {
     const childVariants = {
         hidden: { opacity: 0, y: 20 },
         visible: (i) => ({
@@ -17,24 +17,19 @@ export default function Services() {
     }
   return (
       <section id='pricing'>
-          <div  className='max-w-6xl mx-auto px-4 mt-20'>
+          <div  className='max-w-7xl mx-auto px-4 mt-20'>
           <motion.div
-          className='text-center mb-12 lg:flex lg:justify-between '
+          className='text-center mb-12 border-t border-neutral-800'
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{duration:0.6,ease: 'easeOut'}}
               >
-                  <div className='flex flex-col gap-2 '>
-                  <p className=' text-2xl text-black text-left tracking-tighter'><span className='text-neutral-600'>04 /</span> SERVICES </p>
-                  <h2 className='text-3xl lg:text-5xl mt-2 tracking-tighter
-              text-black text-left
-              bg-clip-text '>
-                      Provising Visual <br /> <span className='font-semibold'>Services</span>
+                  <h2 className='text-3xl lg:text-5xl mt-20 tracking-tighter
+              bg-gradient-to-t from-neutral-50 via-neutral-300 to-neutral-600
+              bg-clip-text text-transparent'>
+                      {PLANS_CONTENT.sectionTitle}
                   </h2>
-                  </div>
-                  <p className='mt-12 text-black text-left text-xl'>We focus on turnin <span className='font-semibold'>idea</span> into useful <br />
-                      and <span className='font-semibold'>amazing</span> Products. Love to see <br />
-                  our services is mathes to clients.</p>
+                  <p className='mt-4'>{ PLANS_CONTENT.sectionDescription }</p>
               </motion.div>
               
               <motion.div
@@ -56,13 +51,13 @@ export default function Services() {
                           custom={index}
                           variants={childVariants}
                           className={`p-8 rounded-xl shadow-lg  bg-neutral-950 ${
-                              plan.popular ? "border border-purple-700" : "border border-purple-800"
+                              plan.popular ? "border border-blue-900/80" : "border border-neutral-800"
                           }`}
                       >
                           {
                               plan.popular && (
                                   <div className='text-center mb-4'>
-                                      <span className='bg-purple-700 text-white text-xs py-1 px-3 rounded-full
+                                      <span className='bg-blue-600 text-white text-xs py-1 px-3 rounded-full
                                       uppercase'>{ PLANS_CONTENT.popularBadge }</span>
                                   </div>
                               )
@@ -73,7 +68,9 @@ export default function Services() {
                           <p className='text-neutral-400 mb-6'>
                               {plan.description}
                           </p>
-                          
+                          <div className='text-2xl lg:text-3xl font-medium mb-6'>
+                              {plan.price}
+                          </div>
                           <ul className='mb-8 space-y-2 text-neutral-400'>
                               {plan.features.map((feature, i) => (
                                   <li key={i} className='flex items-center'>
@@ -84,7 +81,7 @@ export default function Services() {
                                   </li>
                               ))}
                           </ul>
-                          <button className='w-full py-3 px-4 bg-purple-700 hover:bg-purple-600 rounded-lg'>
+                          <button className='w-full py-3 px-4 bg-blue-600 hover:bg-blue-500 rounded-lg'>
                               {PLANS_CONTENT.ctaText}
                           </button>
                       </motion.div>

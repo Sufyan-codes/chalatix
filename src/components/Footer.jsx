@@ -3,8 +3,8 @@ import {FOOTER_CONTENT} from '../constants'
 
 export default function Footer() {
   return (
-      <section className='mt-20 text-neutral-400 bg-black'>
-          <div className='max-w-7xl mx-auto px-4 border-t border-white'>
+      <section className='mt-20 text-neutral-400'>
+          <div className='max-w-7xl mx-auto px-4 border-t border-neutral-800'>
               <div className='grid grid-cols-1 md:grid-cols-4 gap-8  mt-20'>
                   {FOOTER_CONTENT.sections.map((section, index) => (
                       <div key={index}>
@@ -20,7 +20,7 @@ export default function Footer() {
                   ))}
               </div>
 
-              <div className='my-12 border-t border-white pt-8 text-center text-sm text-neutral-500'>
+              <div className='my-12 border-t border-neutral-800 pt-8 text-center text-sm text-neutral-500'>
                   <div className='flex justify-between'>
                       <div className='text-xs'>
                           <p>{FOOTER_CONTENT.platformsText}</p>

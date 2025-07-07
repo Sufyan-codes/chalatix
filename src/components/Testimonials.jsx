@@ -18,19 +18,18 @@ export default function Testimonials() {
 
     return (
         <section id='testimonial'>
-            <div className='max-x-6xl mx-auto px-4 mt-20'>
-                <motion.div className='text-center '
+            <div className='max-x-7xl mx-auto px-4 mt-20'>
+                <motion.div className='text-center mb-12 border-t border-neutral-800'
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
-                    
+                    transition={{duration:0.6, ease:"easeOut"}}
                 >
-                    <p className='text-2xl text-black tracking-tighter'><span className='text-neutral-600'>05 / </span>TESTIMONIALS</p>
-                    <h2 className='text-3xl lg:text-5xl mt-2 text-black tracking-lighter 
-                    '>
+                    <h2 className='text-3xl lg:text-5xl mt-20 tracking-lighter bg-gradient-to-t
+                    from-neutral-50 via-neutral-300 to-neutral-600 bg-clip-text
+                    text-transparent'>
                         {TESTIMONIALS_CONTENT.sectionTitle}
                     </h2>
-                    <p className='mt-4 text-black'>
+                    <p className='mt-4'>
                         {TESTIMONIALS_CONTENT.sectionDescription}
                     </p>
                 </motion.div>
@@ -53,7 +52,7 @@ export default function Testimonials() {
                             custom={index}
                             variants={TestimonialVariants}
                             className='mt-10 p-8 flex flex-col items-center justify-center overflow-hidden 
-                            rounded-2xl bg-black border border-neutral-900 pt-10'
+                            rounded-2xl bg-neutral-900/50 border border-neutral-900 pt-10'
                         >
                             <p className='mb-4 text-neutral-200'>{review.review}</p>
                             <div className='flex items-center mt-4'>
